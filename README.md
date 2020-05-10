@@ -5,8 +5,8 @@ This project is not meant to be used directly as a library, but individual .hpp 
 ## Syntax
 `range(T min, T max, size_t step)`
 Returns something that (kind of) satisfies the Range concept.
-By iterating that thing, you get the numbers in [*min*, *max*), increasing by __step__ every tupe
-The version that takes one parameter sets *min* to T{} (which is 0 when T=int), and step to 1.
+By iterating that thing, you get the numbers in [*min*, *max*), increasing by _step_ every tupe
+The version that takes one parameter sets *min* to T{} (which is 0 when _T=int_), and step to 1.
 ## Guide
 - std::vector: This is the less sophisticated option. It just fills a vector and returns it, the the range-based for loop iterate over the elements. If you are lucky, NRVO will happen and this will be quit fast. Anyway, this option have linear memory consumption, so keep that in mind.
 - coroutine: Overkill. At least until we have std::generator. Until then, this solution is just too much. It was more like a fun thing to do while learning some of the coroutines intricacies than anything else.
